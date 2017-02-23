@@ -15,10 +15,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         labelTitle.text = "Recently viewed"
         labelSubtitle.text = "Items you've checked out"
+        
         labelTitle.font = UIFont(name:"HelveticaNeue-Medium", size: 16.0)
         labelSubtitle.font = UIFont(name:"HelveticaNeue-Light", size: 15.0)
 
-        HttpContentController.loadAsync("https://api.stylight.com/rest/products?apiKey=C6490912AB3211E680F576304DEC7EB7",  update: {products in
+        HttpContentController.loadProductsAsync("https://api.stylight.com/rest/products?apiKey=C6490912AB3211E680F576304DEC7EB7",  update: {products in
             self.products = Array(products.prefix(self.noOfProductsShown))
             self.collectionView.reloadData()
         })
@@ -35,14 +36,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         cell.labelProductName.text = self.products[indexPath.item].Name
         cell.labelBrandName.text = self.products[indexPath.item].Brand.Name
+        cell.labelPrice.text = String(format: "%.2f", self.products[indexPath.item].Price).replacingOccurrences(of: ".", with: ",").appending(" \(self.products[indexPath.item].Currency.Symbol)")
+        
         cell.labelProductName.font = UIFont(name:"HelveticaNeue-Medium", size: 13.0)
         cell.labelBrandName.font = UIFont(name:"HelveticaNeue-Medium", size: 13.0)
         cell.labelPrice.font = UIFont(name:"HelveticaNeue-Medium", size: 13.0)
-
-        cell.labelPrice.text = String(format: "%.2f", self.products[indexPath.item].Price).replacingOccurrences(of: ".", with: ",").appending(" \(self.products[indexPath.item].Currency.Symbol)")
         
             cell.imageProduct.contentMode = .scaleAspectFit
-            HttpContentController.loadImageAsync(self.products[indexPath.item].Image.URL, update:{
+            HttpContentController.loadDataAsync(self.products[indexPath.item].Image.URL, update:{
                 imageData in
                     cell.imageProduct.image = UIImage(data: imageData!)
             })
