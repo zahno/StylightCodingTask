@@ -12,6 +12,13 @@
 		0B08E3361E5E140C003ABF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B08E3341E5E140C003ABF3F /* Main.storyboard */; };
 		0B08E3381E5E140C003ABF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B08E3371E5E140C003ABF3F /* Assets.xcassets */; };
 		0B08E33B1E5E140C003ABF3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B08E3391E5E140C003ABF3F /* LaunchScreen.storyboard */; };
+		0B08E3431E5E15A0003ABF3F /* HttpContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08E3421E5E15A0003ABF3F /* HttpContentController.swift */; };
+		0B08E3451E5E193E003ABF3F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08E3441E5E193E003ABF3F /* Product.swift */; };
+		0B08E3471E5E19CA003ABF3F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08E3461E5E19CA003ABF3F /* Currency.swift */; };
+		0B08E3491E5E1DBA003ABF3F /* DispatchQueueUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08E3481E5E1DBA003ABF3F /* DispatchQueueUtility.swift */; };
+		0B08E3B11E5E47C2003ABF3F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08E3B01E5E47C2003ABF3F /* CustomCollectionViewCell.swift */; };
+		0BF875491E5E57B5004F7273 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF875481E5E57B5004F7273 /* Brand.swift */; };
+		0BF8754B1E5E696F004F7273 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8754A1E5E696F004F7273 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		0B08E3371E5E140C003ABF3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B08E33A1E5E140C003ABF3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B08E33C1E5E140C003ABF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B08E3421E5E15A0003ABF3F /* HttpContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpContentController.swift; sourceTree = "<group>"; };
+		0B08E3441E5E193E003ABF3F /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0B08E3461E5E19CA003ABF3F /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		0B08E3481E5E1DBA003ABF3F /* DispatchQueueUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueUtility.swift; sourceTree = "<group>"; };
+		0B08E3B01E5E47C2003ABF3F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		0BF875481E5E57B5004F7273 /* Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		0BF8754A1E5E696F004F7273 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +69,28 @@
 			isa = PBXGroup;
 			children = (
 				0B08E3301E5E140C003ABF3F /* AppDelegate.swift */,
+				0B41DACF1E5F201C00DF00BC /* Model */,
 				0B08E3321E5E140C003ABF3F /* ViewController.swift */,
 				0B08E3341E5E140C003ABF3F /* Main.storyboard */,
 				0B08E3371E5E140C003ABF3F /* Assets.xcassets */,
 				0B08E3391E5E140C003ABF3F /* LaunchScreen.storyboard */,
 				0B08E33C1E5E140C003ABF3F /* Info.plist */,
+				0B08E3B01E5E47C2003ABF3F /* CustomCollectionViewCell.swift */,
+				0B08E3421E5E15A0003ABF3F /* HttpContentController.swift */,
+				0B08E3481E5E1DBA003ABF3F /* DispatchQueueUtility.swift */,
 			);
 			path = StylightCodingTask;
+			sourceTree = "<group>";
+		};
+		0B41DACF1E5F201C00DF00BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B08E3441E5E193E003ABF3F /* Product.swift */,
+				0BF8754A1E5E696F004F7273 /* Image.swift */,
+				0B08E3461E5E19CA003ABF3F /* Currency.swift */,
+				0BF875481E5E57B5004F7273 /* Brand.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +125,7 @@
 				TargetAttributes = {
 					0B08E32C1E5E140C003ABF3F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = H55BPQLPTC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,7 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B08E3491E5E1DBA003ABF3F /* DispatchQueueUtility.swift in Sources */,
+				0B08E3431E5E15A0003ABF3F /* HttpContentController.swift in Sources */,
+				0B08E3B11E5E47C2003ABF3F /* CustomCollectionViewCell.swift in Sources */,
+				0BF875491E5E57B5004F7273 /* Brand.swift in Sources */,
+				0B08E3471E5E19CA003ABF3F /* Currency.swift in Sources */,
+				0B08E3451E5E193E003ABF3F /* Product.swift in Sources */,
 				0B08E3331E5E140C003ABF3F /* ViewController.swift in Sources */,
+				0BF8754B1E5E696F004F7273 /* Image.swift in Sources */,
 				0B08E3311E5E140C003ABF3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H55BPQLPTC;
 				INFOPLIST_FILE = StylightCodingTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.christianegoehring.StylightCodingTask;
@@ -270,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H55BPQLPTC;
 				INFOPLIST_FILE = StylightCodingTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.christianegoehring.StylightCodingTask;
@@ -297,6 +336,7 @@
 				0B08E3411E5E140C003ABF3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
